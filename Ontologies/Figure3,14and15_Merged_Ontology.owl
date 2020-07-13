@@ -1,0 +1,3184 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl">
+    <Prefix name="" IRI="http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="rabbit" IRI="http://www.ordnancesurvey.co.uk/ontology/Rabbit/v1.0/Rabbit.owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Heshan Du, University of Leeds</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal>April, 2016</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rabbit:Acknowledgment"/>
+        <Literal>This research is supported by EPSRC under grant no. EP/K021699/1 which we gratefully acknowledge.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <Literal>Although much care has been taken to provide accurate information, neither the ontology creator (author) nor the University of Leeds, nor anyone else associated with this ontology, shall be liable for any loss, damage, or liability directly or indirectly caused or alleged to be caused by this ontology. The material contained herein is not intended to provide specific advice or recommendations for any specific situation.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rabbit:KnowledgeSource"/>
+        <Literal>The knowledge sources of this ontology include:
+
+- knowledge explained in the textbook: Principles of Soil Physics, by Rattan Lal and Manoj K. Shukla, 2004.
+
+- knowledge of domain experts
+
+- The SWEET ontology (https://sweet.jpl.nasa.gov)
+
+- online dictionaries: Oxford Dictionary (http://www.oxforddictionaries.com) and Cambridge Dictionary (http://dictionary.cambridge.org)
+
+For the relation statements (OWL logical axioms) in the ontology, we add annotations to indicate their knowledge sources. If a statement is based on knowledge explained in the textbook, we provide page numbers, table names, figure names, chapter or section names to help users locate its explanations.
+
+The file Soil-Property-Process.owl is created manually. Opening the file using a text editor, one can find the annotations of a relation statement easily.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rabbit:License"/>
+        <Literal>Creative Commons Attribution 4.0 International (CC BY 4.0)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rabbit:Purpose"/>
+        <Literal>To describe soil properties and processes, as well as their relationships.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rabbit:Scope"/>
+        <Literal>The ontology mainly describes soil physical properties and processes, as well as how they affect each other.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>Version 1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AbioticPhenomena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Air"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirCarbonDioxideContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirPhysicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AlgalGrowth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Altitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnatomicalEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArtificialProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AtmosphericPressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BiologicalNitrogenFixation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Biomass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BioticPhenomena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarbonSupplementUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChemicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChemicalSubstance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Climate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoarseSand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cocoon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CocoonUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DegreeOfSaturation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrySoilBulkDensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FabricatedProduct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FineSand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FormerLandUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Funges"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GasenousCompositionOfSoilAir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Grass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Irrigation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LandCover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LandManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LandUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LivingEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaterialEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumSand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeteorologicalPhenomena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeteorologicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Myccorhiza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonAnatomicalEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pavement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PermanentWiltingPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phenomena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalPhenomena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantAvailableWaterCapacity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantAvailableWaterContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantCover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantGrowth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantNutrientUptake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantPart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantRespiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantWaterUptake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Planting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantingArtificialProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantingSeason"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantingTreatment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Road"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Root"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RootBiomass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RootGrowth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RootRespiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Season"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeedlingEmergence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeedlingPlanting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shelter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShelterUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Silt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Slope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Soil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilAcidification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilAgriculturalFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilAir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilAirPhysicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilBiologicalProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilBulkDensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilChemicalDegradativeProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilChemicalProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilChemicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilClayContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilDegradation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilDensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilDesertification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilElectricalCapacitance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilElectricalConductivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilInorganicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilManagementProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilMoisture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilMoistureContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilMoistureContentLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilMoistureFieldCapacity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilNutrient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilNutrientAvailability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilNutrientHoldingCapacity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilNutrientImmobilization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilOrganicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilOrganicMatterContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilOxygenConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilOxygenDeficiency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilPH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilParticle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilPhysicalCapacity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilPhysicalDegradativeProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilPhysicalPhenomena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilPhysicalProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilPrimaryParticle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilProductivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilSalinity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilSalinization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilSandContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilSiltContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilStructuralChange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilSubstance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilVolumetricMoistureContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilWaterConductivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilWaterPhysicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolarRadiation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpatialProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Substance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalPhenomena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegetation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WetSoilBulkDensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WindVelocity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pFcurve"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Influences"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#PropertyOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasImpactOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPossibleCause"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPossibleEffect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inverseProcessOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involvedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#measuredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#measures"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#producedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Autumn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spring"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Summer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Winter"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rabbit:Acknowledgment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rabbit:KnowledgeSource"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rabbit:License"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rabbit:Purpose"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rabbit:Scope"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AbioticPhenomena"/>
+        <Class IRI="#PhysicalPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Air"/>
+        <Class IRI="#ChemicalSubstance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Air"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#Rain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirCarbonDioxideContent"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirCarbonDioxideContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirHumidity"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirHumidity"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirPhysicalProperty"/>
+        <Class IRI="#PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirPhysicalProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Air"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirQuality"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AtmosphericPressure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilTemperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlgalGrowth"/>
+        <Class IRI="#PlantGrowth"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlgalGrowth"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#Myccorhiza"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Altitude"/>
+        <Class IRI="#SpatialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Altitude"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnatomicalEntity"/>
+        <Class IRI="#MaterialEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArtificialProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#AirCarbonDioxideContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#Wind"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BiologicalNitrogenFixation"/>
+        <Class IRI="#SoilBiologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biomass"/>
+        <Class IRI="#LivingEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilParticle"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilStructure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#producedBy"/>
+            <Class IRI="#Root"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BioticPhenomena"/>
+        <Class IRI="#PhysicalPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BioticPhenomena"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#LandCover"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonSupplementUse"/>
+        <Class IRI="#PlantingTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonSupplementUse"/>
+        <Class IRI="#SoilManagementProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonSupplementUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilOrganicMatterContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChemicalProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChemicalSubstance"/>
+        <Class IRI="#NonAnatomicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Clay"/>
+        <Class IRI="#SoilPrimaryParticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Clay"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#SoilClayContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climate"/>
+        <Class IRI="#MeteorologicalPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilDesertification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#AirPhysicalProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#MeteorologicalProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoarseSand"/>
+        <Class IRI="#Sand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cocoon"/>
+        <Class IRI="#FabricatedProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cocoon"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#CocoonUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CocoonUse"/>
+        <Class IRI="#PlantingTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CocoonUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilStructure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CocoonUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CocoonUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#SeedlingPlanting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crop"/>
+        <Class IRI="#Plant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crop"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilStructure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DegreeOfSaturation"/>
+        <Class IRI="#SoilMoistureContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diameter"/>
+        <Class IRI="#Length"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diameter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Stem"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrySoilBulkDensity"/>
+        <Class IRI="#SoilBulkDensity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FabricatedProduct"/>
+        <Class IRI="#NonAnatomicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FineSand"/>
+        <Class IRI="#Sand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FormerLandUse"/>
+        <Class IRI="#LandUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Funges"/>
+        <Class IRI="#LivingEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Funges"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#Myccorhiza"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GasenousCompositionOfSoilAir"/>
+        <Class IRI="#SoilAirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GasenousCompositionOfSoilAir"/>
+        <Class IRI="#SoilContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Grass"/>
+        <Class IRI="#Vegetation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Irrigation"/>
+        <Class IRI="#PlantingTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Irrigation"/>
+        <Class IRI="#SoilManagementProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Irrigation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilTemperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Irrigation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LandCover"/>
+        <Class IRI="#NonAnatomicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LandManagement"/>
+        <Class IRI="#HumanActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LandUse"/>
+        <Class IRI="#LandManagement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LandUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilDegradation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Length"/>
+        <Class IRI="#SpatialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LivingEntity"/>
+        <Class IRI="#AnatomicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <Class IRI="#SpatialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#LandCover"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Soil"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#WeatherEvent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialEntity"/>
+        <Class IRI="#Substance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediumSand"/>
+        <Class IRI="#Sand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeteorologicalPhenomena"/>
+        <Class IRI="#AbioticPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeteorologicalProperty"/>
+        <Class IRI="#PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Myccorhiza"/>
+        <Class IRI="#BioticPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Myccorhiza"/>
+        <Class IRI="#PlantingTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonAnatomicalEntity"/>
+        <Class IRI="#MaterialEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pavement"/>
+        <Class IRI="#LandCover"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PermanentWiltingPoint"/>
+        <Class IRI="#SoilMoistureContentLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PermanentWiltingPoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#PlantAvailableWaterContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalPhenomena"/>
+        <Class IRI="#Phenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plant"/>
+        <Class IRI="#LivingEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#partOf"/>
+            <Class IRI="#PlantCover"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantAvailableWaterCapacity"/>
+        <Class IRI="#SoilPhysicalCapacity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantAvailableWaterCapacity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilWaterPhysicalProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantAvailableWaterContent"/>
+        <Class IRI="#SoilMoistureContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantAvailableWaterContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantWaterUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantCover"/>
+        <Class IRI="#LandCover"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantGrowth"/>
+        <Class IRI="#PlantProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantGrowth"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#GasenousCompositionOfSoilAir"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantGrowth"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantPart"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantGrowth"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantWaterUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantNutrientUptake"/>
+        <Class IRI="#PlantProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantNutrientUptake"/>
+        <Class IRI="#SoilAgriculturalFunction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantNutrientUptake"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantNutrientUptake"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#by"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantPart"/>
+        <Class IRI="#LivingEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantPart"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#partOf"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantProcess"/>
+        <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#by"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantRespiration"/>
+        <Class IRI="#PlantProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantRespiration"/>
+        <Class IRI="#SoilAgriculturalFunction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantWaterUptake"/>
+        <Class IRI="#PlantProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantWaterUptake"/>
+        <Class IRI="#SoilAgriculturalFunction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantWaterUptake"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantWaterUptake"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantWaterUptake"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#by"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Planting"/>
+        <Class IRI="#PlantCover"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantingArtificialProperty"/>
+        <Class IRI="#ArtificialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantingSeason"/>
+        <Class IRI="#PlantingTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantingSeason"/>
+        <Class IRI="#Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantingSeason"/>
+        <Class IRI="#TemporalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantingSeason"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#SeedlingPlanting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantingTreatment"/>
+        <Class IRI="#PlantingArtificialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <Class IRI="#WeatherEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AirTemperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#AirHumidity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#SoilDesertification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#SoilPhysicalDegradativeProcess"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Road"/>
+        <Class IRI="#Pavement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Root"/>
+        <Class IRI="#PlantPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Root"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#Myccorhiza"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Root"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#partOf"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootBiomass"/>
+        <Class IRI="#Biomass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootGrowth"/>
+        <Class IRI="#PlantProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootGrowth"/>
+        <Class IRI="#SoilAgriculturalFunction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootGrowth"/>
+        <Class IRI="#SoilBiologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootGrowth"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootGrowth"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#Root"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootRespiration"/>
+        <Class IRI="#PlantProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootRespiration"/>
+        <Class IRI="#SoilBiologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantWaterUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RootRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilOxygenConcentration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sand"/>
+        <Class IRI="#SoilPrimaryParticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sand"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#SoilSandContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Season"/>
+        <Class IRI="#TemporalPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Season"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#WeatherEvent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeedlingEmergence"/>
+        <Class IRI="#SoilBiologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeedlingPlanting"/>
+        <Class IRI="#LandManagement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeedlingPlanting"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantCover"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeedlingPlanting"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeedlingPlanting"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SeedlingEmergence"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shelter"/>
+        <Class IRI="#FabricatedProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShelterUse"/>
+        <Class IRI="#PlantingTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShelterUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SolarRadiation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShelterUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#Wind"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShelterUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#SeedlingPlanting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Silt"/>
+        <Class IRI="#SoilPrimaryParticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Silt"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#SoilSiltContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Slope"/>
+        <Class IRI="#SpatialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Slope"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soil"/>
+        <Class IRI="#ChemicalSubstance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilAcidification"/>
+        <Class IRI="#SoilChemicalDegradativeProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilAgriculturalFunction"/>
+        <Class IRI="#SoilFunction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilAir"/>
+        <Class IRI="#SoilGas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilAir"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilAirPhysicalProperty"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilAirPhysicalProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Air"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilBiologicalProcess"/>
+        <Class IRI="#SoilProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilBulkDensity"/>
+        <Class IRI="#SoilDensity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilBulkDensity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilBulkDensity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantWaterUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilBulkDensity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#GasenousCompositionOfSoilAir"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilChemicalDegradativeProcess"/>
+        <Class IRI="#SoilChemicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilChemicalDegradativeProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilChemicalDegradativeProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilProductivity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilChemicalProcess"/>
+        <Class IRI="#SoilProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilChemicalProperty"/>
+        <Class IRI="#ChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilChemicalProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Soil"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilClayContent"/>
+        <Class IRI="#SoilContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilClayContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilBulkDensity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilComponent"/>
+        <Class IRI="#SoilSubstance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilStructure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilContent"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilDegradation"/>
+        <Class IRI="#SoilChemicalDegradativeProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilDegradation"/>
+        <Class IRI="#SoilPhysicalDegradativeProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilDensity"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilDesertification"/>
+        <Class IRI="#SoilChemicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilDesertification"/>
+        <Class IRI="#SoilPhysicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilElectricalCapacitance"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilElectricalConductivity"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilFunction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#Soil"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilGas"/>
+        <Class IRI="#SoilComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilInorganicComponent"/>
+        <Class IRI="#SoilComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilInorganicComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilInorganicComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantWaterUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilInorganicComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilBulkDensity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilManagement"/>
+        <Class IRI="#LandManagement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilManagementProperty"/>
+        <Class IRI="#ArtificialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilManagementProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#Soil"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilManagementProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilStructure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilManagementProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PropertyOf"/>
+            <Class IRI="#SoilManagement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilMoisture"/>
+        <Class IRI="#SoilComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilMoistureContent"/>
+        <Class IRI="#SoilWaterPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilMoistureContentLevel"/>
+        <Class IRI="#SoilWaterPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilMoistureFieldCapacity"/>
+        <Class IRI="#SoilMoistureContentLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilNutrient"/>
+        <Class IRI="#SoilSubstance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilNutrientAvailability"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilNutrientAvailability"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilNutrientHoldingCapacity"/>
+        <Class IRI="#SoilPhysicalCapacity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilNutrientImmobilization"/>
+        <Class IRI="#SoilChemicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicComponent"/>
+        <Class IRI="#SoilComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#GasenousCompositionOfSoilAir"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilBulkDensity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilNutrientImmobilization"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#CarbonSupplementUse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicMatterContent"/>
+        <Class IRI="#SoilContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicMatterContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AirQuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicMatterContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicMatterContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilAcidification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicMatterContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilChemicalDegradativeProcess"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicMatterContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilMoistureFieldCapacity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOrganicMatterContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilPhysicalDegradativeProcess"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenConcentration"/>
+        <Class IRI="#SoilAirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenConcentration"/>
+        <Class IRI="#SoilContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenConcentration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenDeficiency"/>
+        <Class IRI="#SoilPhysicalPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenDeficiency"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenDeficiency"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenDeficiency"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantWaterUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenDeficiency"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootRespiration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilOxygenDeficiency"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SeedlingEmergence"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPH"/>
+        <Class IRI="#SoilChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilParticle"/>
+        <Class IRI="#SoilComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalCapacity"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalDegradativeProcess"/>
+        <Class IRI="#SoilPhysicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalDegradativeProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalDegradativeProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilProductivity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalPhenomena"/>
+        <Class IRI="#AbioticPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalPhenomena"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#Soil"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalProcess"/>
+        <Class IRI="#SoilProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilFunction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalProperty"/>
+        <Class IRI="#PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPhysicalProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilFunction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilPrimaryParticle"/>
+        <Class IRI="#SoilParticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilProcess"/>
+        <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#by"/>
+            <Class IRI="#Soil"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilProductivity"/>
+        <Class IRI="#SoilAgriculturalFunction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilSalinity"/>
+        <Class IRI="#SoilChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilSalinity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilSalinization"/>
+        <Class IRI="#SoilChemicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilSandContent"/>
+        <Class IRI="#SoilContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilSiltContent"/>
+        <Class IRI="#SoilContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructuralChange"/>
+        <Class IRI="#SoilPhysicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantRespiration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantWaterUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootRespiration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilBulkDensity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilOrganicComponent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilProcess"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilStructure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#GasenousCompositionOfSoilAir"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilSubstance"/>
+        <Class IRI="#NonAnatomicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilSubstance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#partOf"/>
+            <Class IRI="#Soil"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#LandCover"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#RootGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilBulkDensity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilNutrientAvailability"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilOxygenConcentration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#PlantRespiration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#SoilProcess"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilType"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilType"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilChemicalProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilType"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilPhysicalProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilVolumetricMoistureContent"/>
+        <Class IRI="#SoilMoistureContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilVolumetricMoistureContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantNutrientUptake"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilVolumetricMoistureContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilElectricalCapacitance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilVolumetricMoistureContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilElectricalConductivity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilVolumetricMoistureContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#PlantAvailableWaterContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilWaterConductivity"/>
+        <Class IRI="#SoilWaterPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilWaterPhysicalProperty"/>
+        <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarRadiation"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarRadiation"/>
+        <Class IRI="#WeatherEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarRadiation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AirTemperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarRadiation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpatialProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stem"/>
+        <Class IRI="#PlantPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class IRI="#PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalPhenomena"/>
+        <Class IRI="#Phenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tree"/>
+        <Class IRI="#Vegetation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegetation"/>
+        <Class IRI="#Plant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#ChemicalSubstance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#Rain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#SoilWaterPhysicalProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherEvent"/>
+        <Class IRI="#MeteorologicalPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherEvent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involvedIn"/>
+            <Class IRI="#Climate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WetSoilBulkDensity"/>
+        <Class IRI="#SoilBulkDensity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <Class IRI="#WeatherEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#AirTemperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#SoilDegradation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#SoilPhysicalDegradativeProcess"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WindVelocity"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pFcurve"/>
+        <Class IRI="#SoilWaterPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pFcurve"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#PermanentWiltingPoint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pFcurve"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactOn"/>
+            <Class IRI="#SoilMoistureFieldCapacity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Season"/>
+        <NamedIndividual IRI="#Autumn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Season"/>
+        <NamedIndividual IRI="#Spring"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Season"/>
+        <NamedIndividual IRI="#Summer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Season"/>
+        <NamedIndividual IRI="#Winter"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#PropertyOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasImpactOn"/>
+        <ObjectProperty IRI="#Influences"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#involvedIn"/>
+        <ObjectProperty IRI="#Influences"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#producedBy"/>
+        <ObjectProperty IRI="#hasPossibleCause"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPossibleCause"/>
+        <ObjectProperty IRI="#hasPossibleEffect"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#measuredBy"/>
+        <ObjectProperty IRI="#measures"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#Influences"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasImpactOn"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasPart"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasPossibleCause"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasPossibleEffect"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#involvedIn"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#partOf"/>
+    </TransitiveObjectProperty>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#Influences"/>
+            <ObjectProperty IRI="#partOf"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#Influences"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#inverseProcessOf"/>
+            <ObjectProperty IRI="#Influences"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#Influences"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#measuredBy"/>
+            <ObjectProperty IRI="#Influences"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#Influences"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Air</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#AirHumidity</IRI>
+        <Literal>[15.1 INTRODUCTION, p. 409]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#AirTemperature</IRI>
+        <Literal>[15.1 INTRODUCTION, p. 409]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#AlgalGrowth</IRI>
+        <Literal>Alga is a simple, non-flowering, and typically aquatic plant of a large assemblage that includes the seaweeds and many single-celled forms. Algae contain chlorophyll but lack true stems, roots, leaves, and vascular tissue. [Oxford Dictionary]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#AtmosphericPressure</IRI>
+        <Literal>[18.8 FLOW OF AIR IN SOIL, p.527]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#BiologicalNitrogenFixation</IRI>
+        <Literal>[18.1.1 Nitrogen, p.516]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Biomass</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Biomass</IRI>
+        <Literal>[20.5 SOIL WATER REPELLENCY, p.600]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Biomass</IRI>
+        <Literal>[4.9.4 Soil Fertility Management and Soil Amendments, p.130]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#ChemicalSubstance</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Clay</IRI>
+        <Literal>[3.1.1 Particle Size Distribution or Soil Texture, p.31]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Crop</IRI>
+        <Literal>[4.9.1 Cropping and Farming Systems, p.130]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#DegreeOfSaturation</IRI>
+        <Literal>[2.1.3 Soil Moisture Content, p.21]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#DrySoilBulkDensity</IRI>
+        <Literal>Dry soil bulk density.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#DrySoilBulkDensity</IRI>
+        <Literal>[2.1.1 Soil Density, p.18]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#HumanActivity</IRI>
+        <Literal>Top-level concept defined in the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Irrigation</IRI>
+        <Literal>(Fig. 17.16). [17.17 MANAGEMENT OF SOIL TEMPERATURE, p.502, 507]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Irrigation</IRI>
+        <Literal>(Table 18.10). [18.8 FLOW OF AIR IN SOIL, p.527]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Irrigation</IRI>
+        <Literal>[14.1 DEFINITIONS AND BASIC CONCEPT, p.376]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Irrigation</IRI>
+        <Literal>[9.4 COMPONENTS OF THE HYDROLOGIC CYCLE, p.249-250]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#LandUse</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#LivingEntity</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#MeteorologicalProperty</IRI>
+        <Literal>[15.1 INTRODUCTION, p. 409]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#MeteorologicalProperty</IRI>
+        <Literal>[15.3.1 Initial Stage, p.411]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PermanentWiltingPoint</IRI>
+        <Literal>[10.1.2 Permanent Wilting Point (PWP), p.272]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Plant</IRI>
+        <Literal>(Tables 18.2 and 18.3). [18.2 SOIL AIR, p.518]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Plant</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Plant</IRI>
+        <Literal>[20.2.2 Soil Management Practices, p.585]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantAvailableWaterCapacity</IRI>
+        <Literal>TABLE 4.8 Some Indices of Soil Structure Based on Properties Other Than Aggregates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>(Fig. 3.23a), (Fig. 3.23b). p78. [3.3.2 Organic Fraction and Soil Processes, p.78, 79]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>(Table 18.5), (Table 18.6). [18.2 SOIL AIR, p.520, 521]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>(Tables 18.2 and 18.3). [18.2 SOIL AIR, p.518]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>(see Chapter 7), (see Chapter 11), (see Chapter 18). [10.1.4 Least Limiting Water Range, p.275]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>FIGURE 17.1 A graph of plant growth with soil temperature. [17.7 SOIL TEMPERATURE, p.483]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>FIGURE 6.3 Effects of soil structure on ecosystem functions. [Chapter 6. Manifestations of Soil Structure]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>[10.2 METHODS OF MEASUREMENT OF SOIL’S MOISTURE CONTENT, p.278]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>[18.3 SOIL AERATION, p.521-522]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>[18.4 OXYGEN DEFICIENCY AND PLANT GROWTH, p.522]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>[20.4 SALT-AFFECTED SOILS, p.594]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>[20.4.2 Effects of Salinity on Water Movement, p.598]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>[20.5 SOIL WATER REPELLENCY, p.600]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantGrowth</IRI>
+        <Literal>[5.4 ORIGIN AND FORMATION OF PORES, p.145]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantNutrientUptake</IRI>
+        <Literal>Nutrient uptake by plants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantNutrientUptake</IRI>
+        <Literal>TABLE 1.1 Soil Physical Properties and Processes That Affect Agricultural, Engineering, and Environmental Soil Functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantNutrientUptake</IRI>
+        <Literal>TABLE 3.17 Soil Properties and Processes Affected by Texture and Inorganic Components</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantNutrientUptake</IRI>
+        <Literal>[16.1 INTRODUCTION, p.433]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantNutrientUptake</IRI>
+        <Literal>[17.7 SOIL TEMPERATURE, p.484]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantPart</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantRespiration</IRI>
+        <Literal>(Fig. 18.7) (Fig. 18.8). [18.13 MANAGEMENT OF SOIL AERATION, p.541]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantRespiration</IRI>
+        <Literal>TABLE 1.1 Soil Physical Properties and Processes That Affect Agricultural, Engineering, and Environmental Soil Functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantRespiration</IRI>
+        <Literal>[17.7 SOIL TEMPERATURE, p.484]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantWaterUptake</IRI>
+        <Literal>TABLE 1.1 Soil Physical Properties and Processes That Affect Agricultural, Engineering, and Environmental Soil Functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantWaterUptake</IRI>
+        <Literal>TABLE 3.17 Soil Properties and Processes Affected by Texture and Inorganic Components</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantWaterUptake</IRI>
+        <Literal>Water uptake by plants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantWaterUptake</IRI>
+        <Literal>[10.1.4 Least Limiting Water Range, p.275]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantWaterUptake</IRI>
+        <Literal>[10.2 METHODS OF MEASUREMENT OF SOIL’S MOISTURE CONTENT, p.278]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#PlantWaterUptake</IRI>
+        <Literal>[11.9 APPLICATIONS OF SOIL-MOISTURE POTENTIAL, p.327]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PlantingArtificialProperty</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Process</IRI>
+        <Literal>Top-level concept defined in the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Property</IRI>
+        <Literal>Top-level concept defined in the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Root</IRI>
+        <Literal>[4.9.1 Cropping and Farming Systems, p.129-130]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Root</IRI>
+        <Literal>[8.5.2 Application of Shrinkage, p.230]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>(Fig. 17.1). [17.7 SOIL TEMPERATURE, p.484]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>TABLE 1.1 Soil Physical Properties and Processes That Affect Agricultural, Engineering, and Environmental Soil Functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[10.2 METHODS OF MEASUREMENT OF SOIL’S MOISTURE CONTENT, p.278]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[19.2.5 Texture, p.558]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[4.1.1 Different Approaches to Describing Soil Structure, p.87]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[4.6 FACTORS AFFECTING AGGREGATION, p.109]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[5.2.1 Textural and Structural Porosity, p.141]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[5.3.3 Shape and Continuity, p.145]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[7.6 SOIL STRENGTH, p.181]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootGrowth</IRI>
+        <Literal>[7.6.3 Measurement of Soil Strength, p.188]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootRespiration</IRI>
+        <Literal>[18.3 SOIL AERATION, p.521, p.522]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootRespiration</IRI>
+        <Literal>[18.4 OXYGEN DEFICIENCY AND PLANT GROWTH, p.522, 523]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#RootRespiration</IRI>
+        <Literal>[18.4 OXYGEN DEFICIENCY AND PLANT GROWTH, p.522]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Sand</IRI>
+        <Literal>[3.1.1 Particle Size Distribution or Soil Texture, p.30]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SeedlingEmergence</IRI>
+        <Literal>[18.4 OXYGEN DEFICIENCY AND PLANT GROWTH, p.522]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Silt</IRI>
+        <Literal>[3.1.1 Particle Size Distribution or Soil Texture, p.31]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Soil</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilAcidification</IRI>
+        <Literal>TABLE 3.22 Soil Degradative Processes Influenced by Inorganic and Organic Components and Clay Minerals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilAgriculturalFunction</IRI>
+        <Literal>TABLE 1.1 Soil Physical Properties and Processes That Affect Agricultural, Engineering, and Environmental Soil Functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilBiologicalProcess</IRI>
+        <Literal>[4.6 FACTORS AFFECTING AGGREGATION, p.109]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilBiologicalProcess</IRI>
+        <Literal>[5.1 GENERAL DESCRIPTION, p.140]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilBulkDensity</IRI>
+        <Literal>From a domain expert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilBulkDensity</IRI>
+        <Literal>TABLE 3.20 Soil Properties and Processes Affected by Soil Organic Component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilBulkDensity</IRI>
+        <Literal>[17.13 THERMAL CONDUCTIVITY, p.497]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilBulkDensity</IRI>
+        <Literal>[2.1.1 Soil Density, p.18]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilBulkDensity</IRI>
+        <Literal>[7.7 SOIL COMPACTION, p.189-191]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilChemicalDegradativeProcess</IRI>
+        <Literal>(Fig. 6.1). (Fig. 6.2). [Chapter 6. Manifestations of Soil Structure, p.153]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilChemicalDegradativeProcess</IRI>
+        <Literal>TABLE 3.22 Soil Degradative Processes Influenced by Inorganic and Organic Components and Clay Minerals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilClayContent</IRI>
+        <Literal>(Fig. 3.22a). (Fig. 3.22b). [3.3.1 Texture and Soil Processes, p.76]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilClayContent</IRI>
+        <Literal>FIGURE 3.22 Relation between clay content and soil propertries and processes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilClayContent</IRI>
+        <Literal>From a domain expert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilDegradation</IRI>
+        <Literal>[3.1.4 Clay Minerals, p.47-48]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilDegradation</IRI>
+        <Literal>[Chapter 6. Manifestations of Soil Structure, p.153]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilDensity</IRI>
+        <Literal>[2.1.1 Soil Density, p.17]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilDesertification</IRI>
+        <Literal>[4.8 IMPACT OF DECLINE IN AGGREGATION AND STRUCTURAL DEGRADATION, p.127]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilElectricalCapacitance</IRI>
+        <Literal>[10.2.2 Indirect Methods: Electrical Conductivity and Capacitance, p.280]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilElectricalConductivity</IRI>
+        <Literal>[10.2.2 Indirect Methods: Electrical Conductivity and Capacitance, p.280]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilFunction</IRI>
+        <Literal>TABLE 1.1 Soil Physical Properties and Processes That Affect Agricultural, Engineering, and Environmental Soil Functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilInorganicComponent</IRI>
+        <Literal>TABLE 3.17 Soil Properties and Processes Affected by Texture and Inorganic Components</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilManagementProperty</IRI>
+        <Literal>Following the SWEET ontology. Management is a subclass of HumanActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoisture</IRI>
+        <Literal>[2.1.3 Soil Moisture Content, p.21]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoistureContent</IRI>
+        <Literal>[10.2 METHODS OF MEASUREMENT OF SOIL’S MOISTURE CONTENT, p.278]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoistureContent</IRI>
+        <Literal>[10.2.2 Indirect Methods: Electrical Conductivity and Capacitance, p.280]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoistureContent</IRI>
+        <Literal>[10.2.2 Indirect Methods: Remote Sensing, p.289-290]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoistureContent</IRI>
+        <Literal>[2.1.3 Soil Moisture Content, p.21]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoistureContent</IRI>
+        <Literal>[Chapter 10 Soil’s Moisture Content, p.268]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoistureFieldCapacity</IRI>
+        <Literal>[10.1.1 Field Moisture Capacity (FC), p.268-269, 272]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilMoistureFieldCapacity</IRI>
+        <Literal>[14.9 FIELD WATER CAPACITY, p.396]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilNutrientAvailability</IRI>
+        <Literal>nutrient availability to the plants</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilNutrientImmobilization</IRI>
+        <Literal>TABLE 3.20 Soil Properties and Processes Affected by Soil Organic Component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilNutrientImmobilization</IRI>
+        <Literal>[16.1 INTRODUCTION, p.433]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicComponent</IRI>
+        <Literal>(Table 3.20) [3.3.2 Organic Fraction and Soil Processes, p.77-78]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicComponent</IRI>
+        <Literal>(Table 3.21).       
+
+TABLE 3.21 Agricultural Applications of Soil Texture and Organic Components [3.3.2 Organic Fraction and Soil Processes, p.78]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicComponent</IRI>
+        <Literal>TABLE 3.20 Soil Properties and Processes Affected by Soil Organic Component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicMatterContent</IRI>
+        <Literal>(Table 3.22). [3.3.2 Organic Fraction and Soil Processes]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicMatterContent</IRI>
+        <Literal>(Table 3.23). (Chapter 16)
+TABLE 3.23 Environmental Applications of Textural Properties and Organic Matter Content [3.3.2 Organic Fraction and Soil Processes]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicMatterContent</IRI>
+        <Literal>Conflicting information exists in Fig. 3.23. Fig. 3.23a seems misleading. The axioms about SoilOrganicMatterContent are based on the natural language description and Fig. 3.23b.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicMatterContent</IRI>
+        <Literal>TABLE 3.22 Soil Degradative Processes Influenced by Inorganic and Organic Components and Clay Minerals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilOrganicMatterContent</IRI>
+        <Literal>[3.3.2 Organic Fraction and Soil Processes, p.78, 79]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilPhysicalCapacity</IRI>
+        <Literal>a class grouping different kinds of soil capacities togethers. See its subclasses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilPhysicalDegradativeProcess</IRI>
+        <Literal>(Fig. 6.1). (Fig. 6.2). [Chapter 6. Manifestations of Soil Structure, p.153]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilPhysicalDegradativeProcess</IRI>
+        <Literal>TABLE 3.22 Soil Degradative Processes Influenced by Inorganic and Organic Components and Clay Minerals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilPrimaryParticle</IRI>
+        <Literal>[Chapter 2 Basic Definitions and Concepts: Soil Components and Phases, p.13]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilProcess</IRI>
+        <Literal>All soil processes are temperature dependent. [17.7 SOIL TEMPERATURE, p.484]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilProductivity</IRI>
+        <Literal>(Fig. 4.22). 
+
+FIGURE 4.22 Local, regional, and global effects of decline in soil structure. [4.8 IMPACT OF DECLINE IN AGGREGATION AND STRUCTURAL DEGRADATION]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilSalinity</IRI>
+        <Literal>From a domain expert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilSalinity</IRI>
+        <Literal>[20.4 SALT-AFFECTED SOILS, p.594]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilSalinity</IRI>
+        <Literal>[20.4.2 Effects of Salinity on Water Movement, p.598]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilSalinization</IRI>
+        <Literal>[20.4 SALT-AFFECTED SOILS, p.593]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilSalinization</IRI>
+        <Literal>[Chapter 15 Soil Water Evaporation, p.409]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilSandContent</IRI>
+        <Literal>From a domain expert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilSiltContent</IRI>
+        <Literal>From a domain expert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilStructuralChange</IRI>
+        <Literal>[7.6.2 Factors Affecting Soil Strength, p.183]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilVolumetricMoistureContent</IRI>
+        <Literal>[2.1.3 Soil Moisture Content, p.21]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SoilWaterPhysicalProperty</IRI>
+        <Literal>physical property relating to soil and water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#SolarRadiation</IRI>
+        <Literal>[15.1 INTRODUCTION, p. 409]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Substance</IRI>
+        <Literal>Top-level concept defined in the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Temperature</IRI>
+        <Literal>[17.1 TEMPERATURE, p.475]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Temperature</IRI>
+        <Literal>[17.3 MEASUREMENT OF TEMPERATURE, p.477]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Vegetation</IRI>
+        <Literal>[17.6.1 Vegetation, p.482]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Water</IRI>
+        <Literal>Chapter 9 Water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#Water</IRI>
+        <Literal>Following the SWEET ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#WetSoilBulkDensity</IRI>
+        <Literal>Wet soil bulk density.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#WetSoilBulkDensity</IRI>
+        <Literal>[2.1.1 Soil Density, p.18]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rabbit:Description"/>
+        <IRI>#WindVelocity</IRI>
+        <Literal>[15.1 INTRODUCTION, p. 409]</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
