@@ -66,10 +66,22 @@ The file Soil-Property-Process.owl is created manually. Opening the file using a
         <Class IRI="#AbioticPhenomena"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#AirHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirPhysicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirTemperature"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Altitude"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ArtificialProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AtmosphericPressure"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BioticPhenomena"/>
@@ -150,6 +162,9 @@ The file Soil-Property-Process.owl is created manually. Opening the file using a
         <Class IRI="#Property"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Rain"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ShelterUse"/>
     </Declaration>
     <Declaration>
@@ -198,6 +213,9 @@ The file Soil-Property-Process.owl is created manually. Opening the file using a
         <Class IRI="#SoilWaterPhysicalProperty"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SolarRadiation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#SpatialProperty"/>
     </Declaration>
     <Declaration>
@@ -208,6 +226,12 @@ The file Soil-Property-Process.owl is created manually. Opening the file using a
     </Declaration>
     <Declaration>
         <Class IRI="#WaterProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#HasProcessOutput"/>
@@ -511,15 +535,98 @@ The file Soil-Property-Process.owl is created manually. Opening the file using a
         <Class IRI="#PhysicalPhenomena"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Altitude"/>
-        <Class IRI="#SpatialProperty"/>
+        <Class IRI="#AirHumidity"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirHumidity"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirHumidity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilEvaporation"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>through AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantWaterNeed, PlantWaterUptake</Literal>
+            <Literal>through PlantTranspiration, PlantWaterNeed, PlantWaterUptake</Literal>
         </Annotation>
+        <Class IRI="#AirHumidity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirPhysicalProperty"/>
+        <Class IRI="#PhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AtmosphericPressure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilEvaporation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>through PlantTranspiration, PlantWaterNeed, PlantWaterUptake
+through AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake</Literal>
+        </Annotation>
+        <Class IRI="#AirTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Altitude"/>
+        <Class IRI="#SpatialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Altitude"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AtmosphericPressure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArtificialProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <Class IRI="#AirPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>through AirCarbonDioxideContent, Photosynthesis, PlantWaterNeed, PlantWaterUptake</Literal>
+        </Annotation>
+        <Class IRI="#AtmosphericPressure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#Influences"/>
             <Class IRI="#PlantGrowth"/>
@@ -528,17 +635,13 @@ The file Soil-Property-Process.owl is created manually. Opening the file using a
     <SubClassOf>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>through AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake</Literal>
+            <Literal>through AirCarbonDioxideContent, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake</Literal>
         </Annotation>
-        <Class IRI="#Altitude"/>
+        <Class IRI="#AtmosphericPressure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#Influences"/>
             <Class IRI="#SoilVolumetricMoistureContent"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ArtificialProperty"/>
-        <Class IRI="#Property"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BioticPhenomena"/>
@@ -557,63 +660,17 @@ The file Soil-Property-Process.owl is created manually. Opening the file using a
         <Class IRI="#MeteorologicalProperty"/>
     </SubClassOf>
     <SubClassOf>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>through Wind</Literal>
-        </Annotation>
         <Class IRI="#Climate"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#Influences"/>
-            <Class IRI="#PlantDamage"/>
+            <Class IRI="#MeteorologicalProperty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>through SolarRadiation, PlantAvailableSolarRadiation, Photosynthesis, PlantWaterNeed, PlantWaterUptake
-through AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantWaterNeed, PlantWaterUptake
-through SolarRadiation, AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantWaterNeed, PlantWaterUptake
-through Wind, AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantWaterNeed, PlantWaterUptake</Literal>
-        </Annotation>
         <Class IRI="#Climate"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#Influences"/>
-            <Class IRI="#PlantGrowth"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>through Wind
-through AirTemperature
-through SolarRadiation, AirTemperature
-through Wind, AirTemperature
-through AirHumidity</Literal>
-        </Annotation>
-        <Class IRI="#Climate"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Influences"/>
-            <Class IRI="#SoilEvaporation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>through Rain, SoilWaterInfiltration
-through SolarRadiation, PlantAvailableSolarRadiation, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through Wind, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through AirTemperature, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through SolarRadiation, AirTemperature, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through SolarRadiation, AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through Wind, AirTemperature, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through Wind, AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
-through AirHumidity, PlantTranspiration, PlantWaterNeed, PlantWaterUptake</Literal>
-        </Annotation>
-        <Class IRI="#Climate"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Influences"/>
-            <Class IRI="#SoilVolumetricMoistureContent"/>
+            <Class IRI="#WeatherEvent"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -850,6 +907,21 @@ through RootVolume, PlantAvailableSoilWaterContent, Photosynthesis, PlantTranspi
     <SubClassOf>
         <Class IRI="#PlantingTreatment"/>
         <Class IRI="#PlantingArtificialProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <Class IRI="#WeatherEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>through SoilWaterInfiltration</Literal>
+        </Annotation>
+        <Class IRI="#Rain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ShelterUse"/>
@@ -1137,6 +1209,10 @@ through SoilWaterRetentionCapacity, PlantAvailableSoilWaterContent, Photosynthes
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SoilVolumetricMoistureContent"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilVolumetricMoistureContent"/>
         <Class IRI="#SoilMoistureContent"/>
     </SubClassOf>
     <SubClassOf>
@@ -1155,6 +1231,45 @@ through SoilOxygenContent, PlantAvailableSoilOxygenContent</Literal>
     <SubClassOf>
         <Class IRI="#SoilWaterPhysicalProperty"/>
         <Class IRI="#SoilPhysicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarRadiation"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarRadiation"/>
+        <Class IRI="#WeatherEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarRadiation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AirTemperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>through PlantAvailableSolarRadiation, Photosynthesis, PlantWaterNeed, PlantWaterUptake</Literal>
+        </Annotation>
+        <Class IRI="#SolarRadiation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantGrowth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>through PlantAvailableSolarRadiation, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
+through AirTemperature, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
+through AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis,</Literal>
+        </Annotation>
+        <Class IRI="#SolarRadiation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SpatialProperty"/>
@@ -1178,6 +1293,52 @@ through SoilOxygenContent, PlantAvailableSoilOxygenContent</Literal>
     <SubClassOf>
         <Class IRI="#WaterProcess"/>
         <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherEvent"/>
+        <Class IRI="#MeteorologicalPhenomena"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <Class IRI="#MeteorologicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <Class IRI="#WeatherEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#AirTemperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#PlantDamage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilEvaporation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>through PlantTranspiration, PlantWaterNeed, PlantWaterUptake
+through AirTemperature, PlantTranspiration, PlantWaterNeed, PlantWaterUptake
+through AirTemperature, AtmosphericPressure, AirCarbonDioxideContent, Photosynthesis, PlantTranspiration, PlantWaterNeed, PlantWaterUptake</Literal>
+        </Annotation>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Influences"/>
+            <Class IRI="#SoilVolumetricMoistureContent"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#Climate"/>
